@@ -44,5 +44,5 @@ jobs:
         
       # Deploy React App to surge
       - name: Deploy React App to surge
-        run: ./build festive-silk.surge.sh --token ${{secrets.SURGE_TOKEN}}
+        run: ./build http://festive-silk.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
      
