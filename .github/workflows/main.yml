@@ -33,9 +33,10 @@ jobs:
 
 
       
-      # Build React App with Yarn Build
-      - name: Building React App
-        run: npm run build --if-present
+      - name: Build React App
+        run: |
+          npm install # Install Dependencies
+          CI=false npm run build # CI=false to ignore warnings
         
       # Install Surge
       - name: Installing Surge
